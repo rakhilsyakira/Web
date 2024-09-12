@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Rinrin</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <table border="1"></table>
+        <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td>Rinrin</td>
+        </tr>
+        <tr>
+            <td>Program Studi</td>
+            <td>:</td>
+            <td>Sistem Informasi Kelautan</td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td>:</td>
+            <td>Perempuan</td>
+        </tr>
+        <tr>
+            <td>Program Studi</td>
+            <td>:</td>
+            <td>Sistem Informasi Kelautan</td>
+        </tr>
+        <tr>
+            <td>Foto</td>
+            <td>:</td>
+            <td><img src="Gambar/rinrin (1).jpeg" alt="Gambar Rinrin" width="20%"></td>
+        </tr>
+        <tr>
+            <td>Profile Instagram</td>
+            <td>:</td>
+            <td><a href="https://www.instagram.com/katarinabluu/">Link Profile Instagram</a></td>
+        </tr>
+    </table>
+   <a href="latihan4.html">Kembali</a>
+</body>
+</html>
