@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2</title>
+    <style>
+   body {
+  background-color: rgb(217, 209, 183);
+}
+    h1 {
+  text-align: center; color: rgb(87, 4, 17); border-bottom: 6px solid rgb(70, 20, 73);}
+
+  div {
+  background-color: rgb(244, 243, 191);
+}
+
+  h2 {
+    text-align: center; color: brown;
+  }
+  
+  h2 {
+    text-align: center; color: rgb(85, 29, 40);
+  }
+
+  h3 {
+    text-align: center; color: indigo;
+  }
+
+  h4 {
+    text-align: center; color: darkslateblue;
+  }
+
+  h5 {
+    text-align: center; color: rgb(17, 46, 92);
+  }
+
+  p {
+    text-align: justify; color: rgb(58, 7, 7); 
+    
+  }
+
+
+    </style>
+</head>
+<body>
+    <h1>Life is meant to be lived</h1>
+    <h2>Life is meant to be lived</h2>
+    <h3>Life is meant to be lived</h3>
+    <h4>Life is meant to be lived</h4>
+    <h5>Life is meant to be lived</h5>
+
+    <p>
+      You have to chase the things that <u>ignite</u> you. You have to to do the things that bring you joy. You have to surround yourself with the <u>people who bring you back home to yourself,</u> 
+      with the people who respect you and embrace you in ways that make you feel like you are worthy and accepted and loved. 
+      You have to do the work to heal yourself, even when it hurst - <u>especially when it hurts,</u> so that you do not continue to approach your life 
+      within the boundary of what is heavy within you.<span style="background-color: yellow;"> You have to put yourself out there, and cannot worry about what other people think, you cannot rob yourself of experience
+        or happiness or inspriration because you are scared of how you will be perceived.</span> You have to be unapologetic
+      in the way that you exist here. <span style="background-color: pink;">have to believe that your ideas, and your hope, and your being, deserve to take up space.</span>  
+      You have to believe that you have purpose.  
+    </p>
+</body>
+</html>
