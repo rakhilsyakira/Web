@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 6</title>
+    <style>
+        body {
+            background-color: rgb(88, 73, 50);
+        } 
+        h1 {
+            color: beige;
+        }
+        table {
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <h1>Belajar Membuat Formulir</h1>
+
+    <form action="">
+
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>NIM</td>
+                <td>:</td>
+                <td><input type="text" name="nim"></td>
+            </tr>
+            <tr>
+                <td>Tempat Lahir</td>
+                <td>:</td>
+                <td><input type="text" name="tmptlahir"></td>
+            </tr>
+            <tr>
+                <td>Tanggal Lahir</td>
+                <td>:</td>
+                <td><input type="date" name="tgllahir"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>:</td>
+                <td>
+                    <input type="radio" name="jk" value="Laki-Laki"> Laki-Laki <br>
+                    <input type="radio" name="jk" value="Perempuan"> Perempuan <br>
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td><textarea name="Alamat"></textarea></td>
+            </tr>
+            <tr>
+                <td>Hobi</td>
+                <td>:</td>
+                <td>
+                    <input type="checkbox" name="Hobi" value="Baca"> Baca <br>
+                    <input type="checkbox" name="Hobi" value="Nulis"> Nulis <br>
+                    <input type="checkbox" name="Hobi" value="Desain"> Desain <br>
+                    <input type="checkbox" name="Hobi" value="Nyanyi"> Nyanyi <br>
+                </td>
+            </tr>
+            <tr>
+                <td>Program Studi</td>
+                <td>:</td>
+                <td>
+                    <select name="Prodi">
+                        <option value="PGSD">Pendidikan Guru Sekolah Dasar</option> 
+                        <option value="PGPAUD">Pendidikan Guru Sekolah Usia Dini</option>
+                        <option value="PKP">Pendidikan Kelautan dan Perikanan</option>
+                        <option value="SIK">Sistem Informasi Kelautan</option>
+                        <option value="LK">Logistik Kelautan</option>
+                    </select> <br>
+                </td>
+            </tr>
+        </table>
+
+        <input type="submit" value="simpan"> 
+    </form>
+</body>
+</html>
