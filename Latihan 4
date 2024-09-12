@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 4</title>
+
+    <Style>
+        body {
+            background-color: bisque;
+        }
+        h1 {
+            font-style: arial;
+        }
+    </Style>
+</head>
+<body>
+    <H1>PROFILE TABLE</H1>
+
+    <table border="1">
+        <tr>
+            <td>No.</td>
+            <td>NIM</td>
+            <td>Nama</td>
+            <td>Jenis Kelamin</td>
+            <td>Kelas</td>
+            <td>Profil</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2304688</td>
+            <td>Rakhil</td>
+            <td>Perempuan</td>
+            <td>SIK B</td>
+            <td><a href="Rakhil.html">Profil Rakhil</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2309842</td>
+            <td>Ekhnath</td>
+            <td>Laki Laki</td>
+            <td>SIK B</td>
+            <td><a href="Ekhnath.html">Profile Ekhnath</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>23056123</td>
+            <td>rinrin</td>
+            <td>Perempuan</td>
+            <td>SIK B</td>
+            <td><a href="Rinrin.html">Profile Rinrin</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2308734</td>
+            <td>Kala</td>
+            <td>Laki Laki</td>
+            <td>SIK B</td>
+            <td><a href="Kala.html">Profile Kala</a></td>
+        </tr>
+    </table>
+</body>
+</html>
