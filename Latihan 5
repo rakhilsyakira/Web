@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 5</title>
+    <style>
+        body {
+            background-color: darkgray;
+        }
+        h1 {
+            color: rgb(0, 26, 0);
+        }
+        table {
+            color: honeydew; 
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Belajar Membuat Formulir</h1>
+
+    <table>
+    <form action="">
+        Nama : <input type="text" name="nama"> <br>
+        NIM : <input type="text" name="nim"> <br>
+        Tempat Lahir: <input type="text" name="tmptlahir"> <br>
+        Tanggal Lahir: <input type="date" name="tgllahir"> <br>
+        Jenis Kelamin:
+        <input type="radio" name="jk" value="Laki-Laki"> Laki-Laki <br>
+        <input type="radio" name="jk" value="Perempuan"> Perempuan <br>
+        Alamat: <textarea name="Alamat"></textarea> <br>
+        Hobi:
+        <input type="checkbox" name="Hobi" value="Baca"> Baca <br>
+        <input type="checkbox" name="Hobi" value="Nulis"> Nulis <br>
+        <input type="checkbox" name="Hobi" value="Desain"> Desain <br>
+        <input type="checkbox" name="Hobi" value="Nyanyi"> Nyanyi <br>
+        Program Studi:
+        <select name="Prodi">
+            <option value="PGSD">Pendidikan Guru Sekolah Dasar</option> 
+            <option value="PGPAUD">Pendidikan Guru Sekolah Usia Dini</option>
+            <option value="PKP">Pendidikan Kelautan dan Perikanan</option>
+            <option value="SIK">Sistem Informasi Kelautan</option>
+            <option value="LK">Logistik Kelautan</option>
+        </select> <br>
+        <input type="submit" value="simpan">
+    </form>
+</table>
+</body>
+</html>
