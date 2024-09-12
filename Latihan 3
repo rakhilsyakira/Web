@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 3</title>
+
+    <style>
+        body {
+            background-color: rgb(187, 167, 142);
+        }
+        h1 {
+            text-align: left;
+        }
+        img {
+            border-radius: 8px;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>LUCID DREAMS..?</h1>
+
+    <img src="Gambar/Lucid Dreaming.jpeg" alt="Gambar Lucid Dreaming" width="40%" > 
+
+<p>Penulis: RS</p>
+<hr>
+
+<p>I feel like I'm missing something
+    I feel like I'm lost in consciousness and dreams
+    So sweet in this thick fog
+    A dream of walking constantly
+    Don't have any clue on the direction. 
+</p>
+<p>Falling
+    Calling
+    Chasing
+    it's just a dream</p>
+<p>This dream that I can't wake up from
+    Like a lost night in the dark
+    Wandering like I was possessed constantly by you
+    No, no, no, I can't stop love
+    You keep getting deeper in the darkness
+    Deeper in the misty fog that resembles you
+    If you ever disappear, I won't let you go.
+    It softly tickles me between the gaps in my hands
+    That seems to catch and teased me
+    Hold you in my arms like you comfort me.
+    Just like a air that surrounds you.
+    I keep wanting more and more
+    A warm dream of you.
+    A dream that would stayed and about to vanish
+A night seems like about to scatter
+The more you try to escape, the clearer you are.
+The place that led me by whispering deeper
+I'll follow you here forever
+Even in the dark 'til the end, it's still you.
+</p>
+
+
+
+</body>
+</html>
