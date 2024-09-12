@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Ekhnath</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Nama</td>
+            <td>:</td>
+            <td>Ekhnath</td>
+        </tr>
+        <tr>
+            <td>Program Studi</td>
+            <td>:</td>
+            <td>Sistem Informasi Kelautan</td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td>:</td>
+            <td>Laki - Laki</td>
+        </tr>
+        <tr>
+            <td>Program Studi</td>
+            <td>:</td>
+            <td>Sistem Informasi Kelautan</td>
+        </tr>
+        <tr>
+            <td>Foto</td>
+            <td>:</td>
+            <td><img src="Gambar/ekhnath.jpeg" alt="Gambar Ekhnath" width="20%"></td>
+        </tr>
+        <tr>
+            <td>Profile Instagram</td>
+            <td>:</td>
+            <td><a href="https://www.instagram.com/leejen_o_423/">Link Profile Instagram</a></td>
+        </tr>
+    </table>
+   <a href="latihan4.html">Kembali</a>
+</body>
+</html>
