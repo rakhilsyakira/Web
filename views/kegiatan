@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Kegiatan</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Tambah Kegiatan</h1>
+    <form action="/views/kegiatan/create.ejs" method="post">
+        <label for="nama">Nama Kegiatan: </label>
+        <input type="text" id="nama" name="nama" required>
+        <label for="deskripsi">Deskripsi: </label>
+        <textarea name="deskripsi" id="deskripsi" required></textarea>
+        <label for="lokasi">Lokasi: </label>
+        <input type="text" id="lokasi" name="lokasi" required>
+        <label for="pembimbing_id">Pembimbing: </label>
+        <select name="pembimbing_id" id="pembimbing_id">
+            <% Pembimbing.forEach(p => { %> 
+                <option value="<%= p.id %>" <%= p.Nama %></option>
+           <% }); %>
+        </select>
+        <button type="submit">Tambah</button>
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Kegiatan</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Edit Kegiatan</h1>
+    <form action="/views/kegiatan/edit.ejs/<%= kegiatan.id %>" method="post">
+        <label for="nama">Nama Kegiatan</label>
+        <input type="text" id="nama" name="nama" value="<%= kegiatan.nama %>" required>
+        <label for="deskripsi">Deskripsi: </label>
+        <textarea name="deskripsi" id="deskripsi" required><%= kegiatan.deskripsi %></textarea>
+        <label for="lokasi">Lokasi: </label>
+        <input type="text" id="lokasi" name="lokasi" value="<%= kegiatan.lokasi %>" required>
+        <label for="pembimbing_id">Pembimbinh: </label>
+        <select name="pembimbing_id" id="pembimbing_id">
+            <% Pembimbing.forEach(p => { %>
+            <option value="<%= p.id %>" <%= p.id === kegiatan.pembimbing_id ? 'selected' : '' %>><%= p.nama %></option>
+          <% }); %>
+        </select>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Kegiatan</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Daftar Kegiatan</h1>
+    <a href="/views/kegiatan/create.ejs">Tambah Kegiatan</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Kegiatan</th>
+                <th>Deskripsi</th>
+                <th>Lokasi</th>
+                <th>Pembimbing</th>
+                <th>Akasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% kegiatan.forEach(k => { %>
+                <tr>
+                    <td><%= k.nama %></td>
+                    <td><%= k.deskripsi %></td>
+                    <td><%= k.lokasi %></td>
+                    <td><%= k.pembimbing_id %></td>
+                    <td>
+                        <a href="/views/kegiatan/edit.ejs/<%= k.id %>">Edit</a>
+                        <a href="/views/kegiatan/delete/<%= k.id %>">Hapus</a>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
