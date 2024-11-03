@@ -1,0 +1,90 @@
+<!-- views/jadwal/create.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tambah Jadwal</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <h1>Tambah Jadwal</h1>
+  <form action="/views/jadwal/create.ejs" method="post">
+    <label for="kegiatan_id">Kegiatan:</label>
+    <select id="kegiatan_id" name="kegiatan_id">
+      <% kegiatan.forEach(k => { %>
+        <option value="<%= k.id %>"><%= k.nama %></option>
+      <% }); %>
+    </select>
+    <label for="tanggal">Tanggal:</label>
+    <input type="date" id="tanggal" name="tanggal" required>
+    <label for="waktu">Waktu:</label>
+    <input type="time" id="waktu" name="waktu" required>
+    <button type="submit">Tambah</button>
+  </form>
+</body>
+</html>
+
+<!-- views/jadwal/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Jadwal</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <h1>Edit Jadwal</h1>
+  <form action="/views/jadwal/edit.ejs/<%= jadwal.id %>" method="post">
+    <label for="kegiatan_id">Kegiatan:</label>
+    <select id="kegiatan_id" name="kegiatan_id">
+      <% kegiatan.forEach(k => { %>
+        <option value="<%= k.id %>" <%= k.id === jadwal.kegiatan_id ? 'selected' : '' %>><%= k.nama %></option>
+      <% }); %>
+    </select>
+    <label for="tanggal">Tanggal:</label>
+    <input type="date" id="tanggal" name="tanggal" value="<%= jadwal.tanggal %>" required>
+    <label for="waktu">Waktu:</label>
+    <input type="time" id="waktu" name="waktu" value="<%= jadwal.waktu %>" required>
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
+
+<!-- views/jadwal/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daftar Jadwal</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <h1>Daftar Jadwal</h1>
+  <a href="/views/jadwal/create.ejs">Tambah Jadwal</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Kegiatan</th>
+        <th>Tanggal</th>
+        <th>Waktu</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% jadwal.forEach(j => { %>
+        <tr>
+          <td><%= j.kegiatan_id %></td>
+          <td><%= j.tanggal %></td>
+          <td><%= j.waktu %></td>
+          <td>
+            <a href="/views/jadwal/edit.ejs <%= j.id %>">Edit</a>
+            <a href="/views/jadwal/delete/ <%= j.id %>">Hapus</a>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
+
+
