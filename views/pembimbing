@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Pembimbing</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Tambah Pembimbing</h1>
+    <form action="/views/pembimbing/create.ejs" method="post">
+        <label for="nama">Nama Pembimbing</label>
+        <input type="text" id="nama" name="nama" required>
+        <label for="kontak">Kontak</label>
+        <input type="text" id="kontak" name="kontak" required>
+        <button type="submit">Tambah</button>
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Pembimbing</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Edit Pembimbing</h1>
+    <form action="/views/pembimbing/edit.ejs/<%= pembimbing.id %>" method="post">
+        <label for="nama">Nama Pembimbing: </label>
+        <input type="text" id="nama" name="nama" value="<%= pembimbing.nama %>" required>
+        <label for="kontak">Kontak: </label>
+        <input type="text" id="kontak" name="kontak" value="<%= pembimbing.kontak %>" required>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pembimbing</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Daftar Pembimbing</h1>
+    <a href="/views/pembimbing/create.ejs">Tambah Pembimbing</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama Pembimbing</th>
+                <th>Kontak</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% pembimbing.forEach(p => { %>
+                <tr>
+                    <td><%= p.nama %></td>
+                    <td><%= p.kontak %></td>
+                    <td>
+                        <a href="/views/pembimbing/edit.ejs/<%= p.id %>">Edit</a>
+                        <a href="/views/pembimbing/delete/<%= p.id %>">Hapus</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
