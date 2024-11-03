@@ -1,0 +1,78 @@
+<!-- views/siswa/create.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tambah Siswa</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <h1>Tambah Siswa</h1>
+  <form action="/views/siswa/create.ejs" method="post">
+    <label for="nama">Nama Siswa: </label>
+    <input type="text" id="nama" name="nama" required>
+    <label for="kelas">Kelas: </label>
+    <input type="text" id="kelas" name="kelas" required>
+    <button type="submit">Tambah</button>
+  </form>
+</body>
+</html>
+
+
+<!-- views/siswa/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Siswa</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <h1>Edit Siswa</h1>
+  <form action="/views/siswa/edit.ejs/<%= siswa.id %>" method="post">
+    <label for="nama">Nama Siswa:</label>
+    <input type="text" id="nama" name="nama" value="<%= siswa.nama %>" required>
+    <label for="kelas">Kelas:</label>
+    <input type="text" id="kelas" name="kelas" value="<%= siswa.kelas %>" required>
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
+
+<!-- views/siswa/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daftar Siswa</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <h1>Daftar Siswa</h1>
+  <a href="/views/siswa/create.ejs">Tambah Siswa</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Nama Siswa</th>
+        <th>Kelas</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% siswa.forEach(s => { %>
+        <tr>
+          <td><%= s.nama %></td>
+          <td><%= s.kelas %></td>
+          <td>
+            <a href="/views/siswa/edit.ejs <%= s.id %>">Edit</a>
+            <a href="/views/siswa/delete <%= s.id %>">Hapus</a>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>
+
+
+
