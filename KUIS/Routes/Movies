@@ -1,0 +1,56 @@
+const express = require('express');
+const router = express.Router();
+const db = require('../config/db');
+
+// Halaman film (Read)
+router.get('/', (req, res) => {
+    if (!req.session.user) return res.redirect('/auth/login');
+    
+    const query = 'SELECT * FROM movies WHERE user_id = ?';
+    db.query(query, [req.session.user.id], (err, result) => {
+        if (err) throw err;
+        res.render('movies', { movies: result });
+    });
+});
+
+// Proses tambah film (Create)
+router.post('/add', (req, res) => {
+    if (!req.session.user) return res.redirect('/auth/login');
+    
+    const { title, release_year, synopsis, rating } = req.body;
+    const query = "INSERT INTO movies (user_id, title, release_year, synopsis, rating) VALUES (?, ?, ?, ?, ?)";
+    db.query(query, [req.session.user.id, title, release_year, synopsis, rating], (err, result) => {
+        if (err) throw err;
+        res.redirect('/movies');
+    });
+});
+
+// Edit film (Update)
+router.get('/edit/:id', (req, res) => {
+    const query = "SELECT * FROM movies WHERE id = ? AND user_id = ?";
+    db.query(query, [req.params.id, req.session.user.id], (err, result) => {
+        if (err) throw err;
+        if (result.length === 0) return res.redirect('/movies'); // Film tidak ditemukan
+        res.render('edit', { movie: result[0] });
+    });
+});
+
+router.post('/update/:id', (req, res) => {
+    const { title, release_year, synopsis, rating } = req.body;
+    const query = "UPDATE movies SET title = ?, release_year = ?, synopsis = ?, rating = ? WHERE id = ? AND user_id = ?";
+    db.query(query, [title, release_year, synopsis, rating, req.params.id, req.session.user.id], (err, result) => {
+        if (err) throw err;
+        res.redirect('/movies');
+    });
+});
+
+// Hapus film (Delete)
+router.get('/delete/:id', (req, res) => {
+    const query = "DELETE FROM movies WHERE id = ? AND user_id = ?";
+    db.query(query, [req.params.id, req.session.user.id], (err, result) => {
+        if (err) throw err;
+        res.redirect('/movies');
+    });
+});
+
+module.exports = router;
