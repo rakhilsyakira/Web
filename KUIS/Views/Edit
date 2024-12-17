@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Movie</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h2>Edit Movie</h2>
+    <form action="/movies/update/<%= movie.id %>" method="POST">
+        <label>Title</label>
+        <input type="text" name="title" value="<%= movie.title %>" required>
+        <label>Release Year</label>
+        <input type="number" name="release_year" value="<%= movie.release_year %>" required>
+        <label>Synopsis</label>
+        <textarea name="synopsis"><%= movie.synopsis %></textarea>
+        <label>Rating</label>
+        <input type="number" name="rating" value="<%= movie.rating %>" step="0.1">
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
+
+    <h1>Edit Profile</h1>
+
+<form action="/profile/update" method="POST">
+    <label>Username</label>
+    <input type="text" name="username" value="<%= user.username %>">
+
+    <label>Password</label>
+    <input type="password" name="password">
+
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>
