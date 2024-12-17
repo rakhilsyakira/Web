@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+
+    <h2>My Movies</h2>
+    <form action="/movies/add" method="POST">
+        <label>Title</label>
+        <input type="text" name="title" required>
+        <label>Release Year</label>
+        <input type="number" name="release_year" required>
+        <label>Synopsis</label>
+        <textarea name="synopsis"></textarea>
+        <label>Rating</label>
+        <input type="number" name="rating" step="0.1">
+        <button type="submit">Add Movie</button>
+    </form>
+
+    <h3>Movies List</h3>
+    <ul>
+        <% movies.forEach(movie => { %>
+            <li>
+                <%= movie.title %> (<%= movie.release_year %>) - <%= movie.rating %>/10
+                <a href="/movies/edit/<%= movie.id %>">Edit</a>
+                <a href="/movies/delete/<%= movie.id %>">Delete</a>
+            </li>
+        <% }); %>
+    </ul>
+
+    <ul>
+        <% moviesList.forEach(function(movie) { %>
+            <li><%= movie.title %> - <%= movie.year %></li>
+            <!-- Tambahkan tombol edit dan delete -->
+            <button>Edit</button>
+            <button>Delete</button>
+        <% }); %>
+    </ul>
+    
+    <!-- Tambah form untuk menambahkan movie baru -->
+    <form action="/movies/add" method="POST">
+        <input type="text" name="title" placeholder="Movie Title">
+        <input type="number" name="year" placeholder="Release Year">
+        <button type="submit">Add Movie</button>
+    </form>
+    
+</body>
+</html>
