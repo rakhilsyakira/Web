@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <h2>Welcome to the Movie App!</h2>
+        <p>Browse and manage your favorite movies easily.</p>
+        
+        <div>
+            <% if (user) { %>
+                <p>Hello, <%= user.username %>! You are logged in.</p>
+                <a href='movies.ejs'>Go to Movies</a> <!-- Link ke movies -->
+                <a href="profile.ejs">View Profile</a> <!-- Link ke profile -->
+                <form action="logout." method="POST" style="margin-top: 20px;">
+                    <button type="submit">Logout</button>
+                </form>
+            <% } else { %>
+                <p>Welcome, guest!</p>
+                <a href="/auth/login">Login</a> or <a href="/auth/register">Register</a> <!-- Link ke login dan register -->
+            <% } %>
+        </div>
+        
+    </div>
+</body>
+</html>
